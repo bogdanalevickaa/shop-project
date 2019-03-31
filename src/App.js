@@ -30,6 +30,21 @@ const App = () =>{
 					</div>
 				</div>
 			</header>
+			<main className="main">
+				<div className="conteiner">
+					<div className="row">
+						<div className="col-md-3">
+							Filter
+						</div>
+						<div className="col-md-9">
+							Products List
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer className="Footer">
+				Footer
+			</footer>
 		</div>
 	)
 }

@@ -7,8 +7,7 @@ import './header.css'
 import './cart.css'
 import './menu.css'
 
-
-const App = () =>{
+const Header = () =>{
 	return(
 		<div>
 			<header className="header">
@@ -38,6 +37,12 @@ const App = () =>{
 					</div>
 				</div>
 			</header>
+		</div>
+	)
+}
+const Main = () =>{
+	return(
+		<div>
 			<main className="main">
 				<div className="conteiner">
 					<div className="row">
@@ -50,9 +55,25 @@ const App = () =>{
 					</div>
 				</div>
 			</main>
+		</div>
+	)
+}
+const Footer = () =>{
+	return(
+		<div>
 			<footer className="Footer">
 				Footer
 			</footer>
+		</div>
+	)
+}
+
+const App =() => {
+	return(
+		<div>
+			<Header/>
+			<Main/>
+			<Footer/>
 		</div>
 	)
 }

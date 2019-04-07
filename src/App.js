@@ -1,17 +1,25 @@
 import React from 'react'
 
+
+import './reset.css'
+import './base.css'
+import './header.css'
+import './cart.css'
+import './menu.css'
+
+
 const App = () =>{
 	return(
 		<div>
 			<header className="header">
 				<div className="conteiner">
 					<div className="row">
-						<div className="col-md-3">
+						<div className="col-lg-3">
 							<div className="logo">
 								<img src="img/logo.png" alt=""/>
 							</div>
 						</div>
-						<div className="col-md-6">
+						<div className="col-lg-6">
 							<div className="menu">
 								<ul>
 									<li><a href="">Home</a></li>
@@ -21,7 +29,7 @@ const App = () =>{
 								</ul>
 							</div>
 						</div>
-						<div className="col-md-3">
+						<div className="col-lg-3">
 							<div className="cart text-center">
 								<div className="products-count">0</div>
 								<div className="products-price">$500</div>
@@ -33,10 +41,10 @@ const App = () =>{
 			<main className="main">
 				<div className="conteiner">
 					<div className="row">
-						<div className="col-md-3">
+						<div className="col-lg-3">
 							Filter
 						</div>
-						<div className="col-md-9">
+						<div className="col-lg-9">
 							Products List
 						</div>
 					</div>
@@ -48,4 +56,4 @@ const App = () =>{
 		</div>
 	)
 }
-export default App
+export default App;

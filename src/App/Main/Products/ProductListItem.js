@@ -5,7 +5,7 @@ import "./ProductListItem.css"
 
 const ProductListItem = ({
     name,
-    description,
+    description = "No description ...",
     type,
     capacity,
     price
@@ -28,9 +28,9 @@ ProductListItem.propTypes = {
     capacity : PropTypes.number.isRequired,
     price: PropTypes.number.isRequired,
 }
-ProductListItem.defaultProps = {
-    description: "No description",
-    type:"phone",
-}
+// ProductListItem.defaultProps = {
+//     description: "No description",
+//     type:"phone",
+// }
 
 export default ProductListItem

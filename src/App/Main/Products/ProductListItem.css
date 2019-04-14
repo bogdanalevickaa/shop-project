@@ -45,3 +45,9 @@
     text-align: center;
     margin: 10px 0;
 }
+.product-image{
+    background-color: rgb(200, 226, 218);
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+}

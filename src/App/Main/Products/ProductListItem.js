@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import "./ProductListItem.css"
 
 
@@ -20,4 +21,16 @@ const ProductListItem = ({
         </div>
     )
 }
+ProductListItem.propTypes = {
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    capacity : PropTypes.number.isRequired,
+    price: PropTypes.number.isRequired,
+}
+ProductListItem.defaultProps = {
+    description: "No description",
+    type:"phone",
+}
+
 export default ProductListItem

@@ -11,16 +11,12 @@ class ProductListItem extends Component{
         capacity : PropTypes.number.isRequired,
         price: PropTypes.number.isRequired,
     }
-    static defaultProps = {
-        description: "No description",
-        type:"phone",
-    }
     render(){
         const{
             image,
             name,
-            description,
-            type,
+            description = "No description",
+            type = "phone",
             capacity,
             price,
         } = this.props

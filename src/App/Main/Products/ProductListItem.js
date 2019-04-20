@@ -7,6 +7,12 @@ class ProductListItem extends Component{
     state = {
         productCount:1
     }
+
+    onIncrementClick(){
+        this.setState((prevState)=>({
+            productCount: prevState.productCount + 1
+        }))
+    }
     static propTypes = {
         name: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,

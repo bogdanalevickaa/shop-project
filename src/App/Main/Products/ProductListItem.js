@@ -4,6 +4,17 @@ import "./ProductListItem.css"
 
 
 class ProductListItem extends Component{
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        capacity : PropTypes.number.isRequired,
+        price: PropTypes.number.isRequired,
+    }
+    static defaultProps = {
+        description: "No description",
+        type:"phone",
+    }
     render(){
         const{
             image,
@@ -44,16 +55,7 @@ class ProductListItem extends Component{
 // }) =>{
     
 // }
-// ProductListItem.propTypes = {
-//     name: PropTypes.string.isRequired,
-//     description: PropTypes.string.isRequired,
-//     type: PropTypes.string.isRequired,
-//     capacity : PropTypes.number.isRequired,
-//     price: PropTypes.number.isRequired,
-// }
-// ProductListItem.defaultProps = {
-//     description: "No description",
-//     type:"phone",
-// }
+
+
 
 export default ProductListItem

@@ -5,21 +5,29 @@ import "./ProductListItem.css"
 
 class ProductListItem extends Component{
     render(){
+        const{
+            image,
+            name,
+            description,
+            type,
+            capacity,
+            price,
+        } = this.props
         return(
             <div className="product-list-item">
             <div className="product-image">
-                <img src={this.props.image} alt=""/>
+                <img src={image} alt=""/>
             </div>
-                <h2 className="product-title">{this.props.name}</h2>
-                <div className="product-description">{this.props.description}</div>
-                <div className="product-features">Tupe: {this.props.type}</div>
-                <div className="product-features">Capacity: {this.props.capacity} Gb</div>
+                <h2 className="product-title">{name}</h2>
+                <div className="product-description">{description}</div>
+                <div className="product-features">Tupe: {type}</div>
+                <div className="product-features">Capacity: {capacity} Gb</div>
                 <div className="product-quantity">
                     <button>-</button>
                     <input tupe="text" value="1"/>
                     <button>+</button>
                 </div>
-                <div className="product-price">$ {this.props.price}</div>
+                <div className="product-price">$ {price}</div>
                 <button className="btn btn-add-to-cart">Add to cart</button>
             </div>
         )

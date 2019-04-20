@@ -51,3 +51,21 @@
     margin-bottom: 15px;
     padding: 10px 0;
 }
+.product-quantity{
+    text-align: center;
+}
+.product-quantity button{
+    width: 30px;
+    height: 30px;
+    background-color: grey;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.product-quantity button:hover{
+    background-color: black;
+}
+.product-quantity input{
+    height: 30px;
+    text-align: center;
+}

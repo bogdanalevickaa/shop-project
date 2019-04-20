@@ -4,6 +4,12 @@ import "./ProductListItem.css"
 
 
 class ProductListItem extends Component{
+    constructor(){
+        super()
+        this.state = {
+            productCount:1
+        }
+    }
     static propTypes = {
         name: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
@@ -31,7 +37,7 @@ class ProductListItem extends Component{
                 <div className="product-features">Capacity: {capacity} Gb</div>
                 <div className="product-quantity">
                     <button>-</button>
-                    <input tupe="text" value="1"/>
+                    <input tupe="text" value={this.state.productCount} readOnly/>
                     <button>+</button>
                 </div>
                 <div className="product-price">$ {price}</div>
@@ -40,18 +46,5 @@ class ProductListItem extends Component{
         )
     }
 }
-
-// const ProductListItem = ({
-//     image,
-//     name,
-//     description,
-//     type,
-//     capacity,
-//     price
-// }) =>{
-    
-// }
-
-
 
 export default ProductListItem

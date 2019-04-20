@@ -4,11 +4,8 @@ import "./ProductListItem.css"
 
 
 class ProductListItem extends Component{
-    constructor(){
-        super()
-        this.state = {
-            productCount:1
-        }
+    state = {
+        productCount:1
     }
     static propTypes = {
         name: PropTypes.string.isRequired,

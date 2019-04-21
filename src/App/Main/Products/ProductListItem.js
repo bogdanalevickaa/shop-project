@@ -18,7 +18,7 @@ class ProductListItem extends Component{
             productCount: prevState.productCount - 1
         }))
     }
-    renderProductQuantitu (){
+    renderProductQuantity (){
         return(
             <div className="product-quantity">
                 <button 
@@ -60,7 +60,7 @@ class ProductListItem extends Component{
                 <div className="product-description">{description}</div>
                 <div className="product-features">Tupe: {type}</div>
                 <div className="product-features">Capacity: {capacity} Gb</div>
-                {this.renderProductQuantitu()}
+                {this.renderProductQuantity()}
                 <div className="product-price">$ {price}</div>
                 <button className="btn btn-add-to-cart">Add to cart</button>
             </div>

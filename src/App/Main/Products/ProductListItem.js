@@ -8,12 +8,12 @@ class ProductListItem extends Component{
         productCount:1
     }
 
-    onIncrementClick () {
+    onIncrementClick = () => {
         this.setState((prevState)=>({
             productCount: prevState.productCount + 1
         }))
     }
-    onDecrementClick () {
+    onDecrementClick = () => {
         this.setState((prevState)=>({
             productCount: prevState.productCount - 1
         }))

@@ -4,13 +4,25 @@ import "./ProductListItem.css"
 
 
 class ProductListItem extends Component{
+
+    constructor(){
+        super()
+        this.onDecrementClick = this.onDecrementClick.bind(this)
+        this.onIncrementClick = this.onIncrementClick.bind(this)
+    }
+
     state = {
         productCount:1
     }
 
-    onIncrementClick = () => {
+    onIncrementClick () {
         this.setState((prevState)=>({
             productCount: prevState.productCount + 1
+        }))
+    }
+    onDecrementClick () {
+        this.setState((prevState)=>({
+            productCount: prevState.productCount - 1
         }))
     }
     static propTypes = {
@@ -39,9 +51,9 @@ class ProductListItem extends Component{
                 <div className="product-features">Tupe: {type}</div>
                 <div className="product-features">Capacity: {capacity} Gb</div>
                 <div className="product-quantity">
-                    <button>-</button>
+                    <button  onClick={this.onDecrementClick}>-</button>
                     <input tupe="text" value={this.state.productCount} readOnly/>
-                    <button onClick={()=>this.onIncrementClick()}>+</button>
+                    <button onClick={this.onIncrementClick}>+</button>
                 </div>
                 <div className="product-price">$ {price}</div>
                 <button className="btn btn-add-to-cart">Add to cart</button>

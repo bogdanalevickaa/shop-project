@@ -11,14 +11,16 @@ import Footer from './Footer/Footer';
 class App extends Component{
 	state = {
 		cartData:{
-			totalProductCount:0,
-			totalPrice:0,
+			totalProductCount:10,
+			totalPrice:100,
 		}
 	}
 	render(){
 		return(
 			<div>
-				<Header/>
+				<Header
+				cartData={this.state.cartData}
+				/>
 				<Main/>
 				<Footer/>
 			</div>

@@ -2,12 +2,15 @@ import React from 'react'
 
 import './cart.css'
 
- const Cart = () => {
-     return(
-     <div className="cart text-center">
-        <div className="products-count">0</div>
-        <div className="products-price">$500</div>
+ const Cart = ({
+     totalPrice,
+     totalProductCount
+ }) => {
+    return(
+    <div className="cart text-center">
+       <div className="products-count">{totalProductCount}</div>
+       <div className="products-price">$ {totalPrice}</div>
     </div>
-     )
- }
- export default Cart
+    )
+}
+export default Cart

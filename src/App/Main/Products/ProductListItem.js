@@ -18,6 +18,23 @@ class ProductListItem extends Component{
             productCount: prevState.productCount - 1
         }))
     }
+    renderProductQuantitu (){
+        return(
+            <div className="product-quantity">
+                <button 
+                    onClick={()=>this.onDecrementClick()}
+                    disabled={this.state.productCount <= 1}
+                >-
+                </button>
+                <input tupe="text" value={this.state.productCount} readOnly/>
+                <button 
+                    onClick={()=>this.onIncrementClick()}
+                    disabled={this.state.productCount >= 10}
+                >+
+                </button>
+            </div>
+        )
+    }
     static propTypes = {
         name: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
@@ -43,17 +60,7 @@ class ProductListItem extends Component{
                 <div className="product-description">{description}</div>
                 <div className="product-features">Tupe: {type}</div>
                 <div className="product-features">Capacity: {capacity} Gb</div>
-                <div className="product-quantity">
-                    <button 
-                        onClick={()=>this.onDecrementClick()}
-                        disabled={this.state.productCount <= 1}
-                    >-</button>
-                    <input tupe="text" value={this.state.productCount} readOnly/>
-                    <button 
-                        onClick={()=>this.onIncrementClick()}
-                        disabled={this.state.productCount >= 10}
-                    >+</button>
-                </div>
+                {this.renderProductQuantitu()}
                 <div className="product-price">$ {price}</div>
                 <button className="btn btn-add-to-cart">Add to cart</button>
             </div>

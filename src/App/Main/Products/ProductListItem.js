@@ -8,12 +8,12 @@ class ProductListItem extends Component{
         productCount:1
     }
 
-    onIncrementClick = () => {
+    onIncrementClick () {
         this.setState((prevState)=>({
             productCount: prevState.productCount + 1
         }))
     }
-    onDecrementClick = () => {
+    onDecrementClick () {
         this.setState((prevState)=>({
             productCount: prevState.productCount - 1
         }))
@@ -44,9 +44,15 @@ class ProductListItem extends Component{
                 <div className="product-features">Tupe: {type}</div>
                 <div className="product-features">Capacity: {capacity} Gb</div>
                 <div className="product-quantity">
-                    <button  onClick={()=>this.onDecrementClick()}>-</button>
+                    <button 
+                        onClick={()=>this.onDecrementClick()}
+                        disabled={this.state.productCount <= 1}
+                    >-</button>
                     <input tupe="text" value={this.state.productCount} readOnly/>
-                    <button onClick={()=>this.onIncrementClick()}>+</button>
+                    <button 
+                        onClick={()=>this.onIncrementClick()}
+                        disabled={this.state.productCount >= 10}
+                    >+</button>
                 </div>
                 <div className="product-price">$ {price}</div>
                 <button className="btn btn-add-to-cart">Add to cart</button>

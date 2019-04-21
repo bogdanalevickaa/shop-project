@@ -11,8 +11,8 @@ import Footer from './Footer/Footer';
 class App extends Component{
 	state = {
 		cartData:{
-			totalProductCount:10,
-			totalPrice:100,
+			totalProductCount:0,
+			totalPrice:0,
 		}
 	}
 	render(){

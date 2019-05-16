@@ -22,6 +22,7 @@ const ProductsList = ({
                     return(
                         <div className="col-lg-6" key={id}>
                             <ProductListItem
+                                id={id}
                                 image={image}
                                 name={name}
                                 description={description}
@@ -34,15 +35,6 @@ const ProductsList = ({
                     )
                 })
             }
-                {/* <div className="col-lg-6">
-                    <ProductListItem
-                        name="iPhone 7"
-                        description="This is iPhone 7"
-                        type="phone"
-                        capacity="256"
-                        price="800"
-                    />
-                </div> */}
             </div>
         </div>
     )

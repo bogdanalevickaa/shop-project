@@ -7,7 +7,7 @@ import Menu from './Menu/Menu'
 import Cart from './Cart/Cart'
 
 const Header = ({
-	cartData
+	productsInCart
 }) =>{
 	return(
 		<header className="header">
@@ -21,8 +21,7 @@ const Header = ({
 					</div>
 					<div className="col-lg-3">
 						<Cart
-						totalProductCount={cartData.totalProductCount}
-						totalPrice={cartData.totalPrice}
+						productsInCart={productsInCart}
 						/>
 					</div>
 				</div>

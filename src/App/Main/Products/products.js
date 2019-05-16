@@ -7,6 +7,7 @@ const products = [
         capacity:256,
         price:800,
         image:"/images/products/iphone.png",
+        topNews:true,
     },
     {
         id:2,

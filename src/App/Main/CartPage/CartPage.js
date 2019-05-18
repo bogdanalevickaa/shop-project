@@ -2,6 +2,7 @@ import React from 'react';
 import {keys} from 'lodash'
 import '../../Header/Cart/cart.css'
 import products, {getProductsMap} from '../../Main/Products/products'
+import CartTotal from '../../../features/Cart/CartTotal'
 
 
 const CartPage = ({
@@ -19,13 +20,9 @@ const CartPage = ({
                     </div>
                 )) 
             }
-            <div>
-            Total : {
-                keys(productsInCart).reduce((total,productId)=>{
-                    return (total + (productsInCart[productId] * productsMap[productId].price))
-                },0)
-            }$
-            </div>
+            <CartTotal
+                productsInCart = {productsInCart}
+            />
         </div>
     </div>
     )

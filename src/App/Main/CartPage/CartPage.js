@@ -1,14 +1,12 @@
 import React from 'react';
 import {keys} from 'lodash'
 import '../../Header/Cart/cart.css'
-import products from '../../Main/Products/products'
+import products, {getProductsMap} from '../../Main/Products/products'
 
-const productsMap = products.reduce((accObj,product)=>({
-    ...accObj,
-    [product.id]:product
-}),{})
+
 const CartPage = ({
-    productsInCart
+    productsInCart,
+    productsMap = getProductsMap(products)
  }) => {
     return(
     <div>

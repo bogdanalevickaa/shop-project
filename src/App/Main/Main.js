@@ -7,6 +7,7 @@ import ProductsList from './Products/ProductsList'
 
 const Main = ({
 	addProductToCart,
+	productsInCart,
 }) =>{
 	return(
 		<main className="main">
@@ -21,7 +22,11 @@ const Main = ({
 								addProductToCart={addProductToCart}
 							/>
 						}}/>
-						<Route path="/cart" component={CartPage}/>
+						<Route exact path="/cart" render={()=>{
+							return <CartPage
+							productsInCart={productsInCart}
+							/>
+						}}/>
 						<Route path="/payment" component={Payment}/>
 						<Route path="/shipping" component={Shipping}/>
 					</div>

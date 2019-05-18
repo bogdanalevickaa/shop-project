@@ -11,7 +11,8 @@ import Footer from './Footer/Footer';
 class App extends Component{
 	state = {
 		productsInCart:{
-		
+			'1':5,
+			'2':5,
 		}
 	}
 

@@ -2,6 +2,7 @@ import React from 'react';
 import '../../Header/Cart/cart.css'
 import CartTotal from '../../../features/Cart/CartTotal'
 import CartProductList from '../../../features/Cart/CartProductList';
+import CartProductListItemExtended from '../../../features/Cart/CartProductListItemExtended';
 
 
 const CartPage = ({
@@ -13,6 +14,7 @@ const CartPage = ({
         <div className="cart text-center">
             <CartProductList
                 productsInCart = {productsInCart}
+                CartItemComponent = {CartProductListItemExtended}
             />
             <CartTotal
                 productsInCart = {productsInCart}

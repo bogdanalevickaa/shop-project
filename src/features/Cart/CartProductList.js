@@ -7,6 +7,7 @@ const CartProductList = ({
     productsInCart,
     productsMap = getProductsMap(products),
     CartItemComponent = CartProductListItem,
+    removeProductFromCart,
 }) =>{
     return(
         <div>
@@ -16,6 +17,7 @@ const CartProductList = ({
                         product = {productsMap[productId]}
                         productCount = {productsInCart[productId]}
                         key = {productId}
+                        removeProductFromCart={removeProductFromCart}
                     />
                 )) 
             }

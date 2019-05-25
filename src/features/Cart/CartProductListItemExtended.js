@@ -6,7 +6,8 @@ import ProductQuantity from '../Quantity/ProductQuantity';
 const CartProductListItemExtended = ({
     product,
     productCount,
-    removeProductFromCart
+    removeProductFromCart,
+    changeProductQuantity
 }) => (
     <div>       
         <div className="cart-product-list-item-description">
@@ -23,6 +24,8 @@ const CartProductListItemExtended = ({
                     </p>
                     <ProductQuantity
                         productCount={productCount}
+                        onDecrementClick={() => changeProductQuantity(product.id,productCount-1)}
+                        onIncrementClick={() => changeProductQuantity(product.id,productCount+1)}
                     />
                     <p className="cart-extended-count">
                          Selected quantity: <span className="bold"> {productCount} </span> 

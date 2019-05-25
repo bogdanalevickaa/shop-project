@@ -3,7 +3,7 @@ import React from 'react';
 const ProductQuantity = ({
     productCount,
     onDecrementClick,
-    onIncrementClick
+    onIncrementClick,
 }) =>{
     return(
         <div className="product-quantity">

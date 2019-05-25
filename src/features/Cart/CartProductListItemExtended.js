@@ -1,5 +1,6 @@
 import React from 'react'
 import './CartProductListItemExtended.css'
+import ProductQuantity from '../Quantity/ProductQuantity';
 
 
 const CartProductListItemExtended = ({
@@ -20,6 +21,9 @@ const CartProductListItemExtended = ({
                     <p className="cart-extended-price">
                          Price for one item: <span className="bold">$ {product.price} </span> 
                     </p>
+                    <ProductQuantity
+                        productCount={productCount}
+                    />
                     <p className="cart-extended-count">
                          Selected quantity: <span className="bold"> {productCount} </span> 
                          
@@ -27,7 +31,7 @@ const CartProductListItemExtended = ({
                     <p className="cart-extended-sum">
                          Sum for this item: <span className="bold sum-price">$ {(product.price * productCount)} </span> 
                     </p>
-                    <button onClick ={()=> removeProductFromCart(1)}>Delete product</button>
+                    <button onClick ={()=> removeProductFromCart(product.id)}>Delete product</button>
                 </div>
             </div>
         </div>
